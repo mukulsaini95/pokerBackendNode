@@ -27,6 +27,6 @@ app.get("/", (req, res) => {
 	res.send({ email: req.user.email })
 })
 
-var server = app.listen(app.get('port'), () => {
+var server = app.listen(3000,app.get('port'), () => {
 	debug('Express server listening on port ' + server.address().port);
 });

@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 const keys = require('./src/config/keys');
 
 
-mongoose.connect(keys.mongoURI, {
+mongoose.connect(keys.mongoURI,  { useNewUrlParser: true,
 	useNewUrlParser: true,
-	useCreateIndex: true,
-	useUnifiedTopology:true
-})
+	useCreateIndex: true
+ })
 
 mongoose.connection.on('connected',()=>{
 	console.log('connected: ');
